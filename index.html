@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="L'OPTIQUE - Curating the world's most distinguished eyewear houses including Ray-Ban, Persol, Oliver Peoples, Oakley, and Vogue Eyewear. Explore bespoke optical craftsmanship and private boutique styling.">
+  <title>L'OPTIQUE | Maison de Lunetterie & Eyewear Catalogue</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar" aria-label="Announcement">
+    <div class="container">
+      <div>✦ Complimentary Private Optical Consultation & Bespoke Frame Fitting</div>
+      <div>
+        Flagship Boutiques: Milan • New York • Los Angeles • 
+        <a href="contact.html">Book Private Fitting</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Site Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="site-logo" aria-label="L'Optique Home">
+        <div class="logo-monogram">O</div>
+        <div class="site-logo-text">
+          <span class="brand-name">L'OPTIQUE</span>
+          <span class="brand-tagline">Maison de Lunetterie</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="catalog.html" class="nav-link">Catalogue</a>
+        <a href="brands.html" class="nav-link">Brands</a>
+        <a href="catalog.html?category=Sunglasses" class="nav-link">Sunglasses</a>
+        <a href="catalog.html?category=Optical" class="nav-link">Optical</a>
+        <a href="contact.html" class="nav-link">Visit Us</a>
+      </nav>
+
+      <!-- Action Tools -->
+      <div class="header-actions">
+        <button type="button" class="search-trigger-btn" data-action="open-search" aria-label="Search Catalogue">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span>Search (⌘K)</span>
+        </button>
+
+        <button type="button" class="btn btn-outline btn-sm" onclick="openInquiryModal()">
+          Book Try-On
+        </button>
+
+        <a href="https://wa.me/18005550199?text=Hello%20L'Optique%20Concierge,%20I%20would%20like%20to%20inquire%20about%20your%20curated%20eyewear%20catalogue." target="_blank" rel="noopener noreferrer" class="btn-concierge" aria-label="Enquire Now">
+          <span class="live-indicator"></span>
+          <span>Enquire Now</span>
+        </a>
+
+        <button type="button" class="mobile-menu-btn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-content">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <span class="site-logo">
+          <span class="brand-name" style="font-size: 1.3rem;">L'OPTIQUE</span>
+          <span class="brand-tagline">Maison de Lunetterie</span>
+        </span>
+        <span class="modal-close-btn">&times;</span>
+      </div>
+
+      <nav class="mobile-drawer-nav">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="catalog.html" class="mobile-nav-link">Full Catalogue</a>
+        <a href="brands.html" class="mobile-nav-link">Brands</a>
+        <a href="catalog.html?category=Sunglasses" class="mobile-nav-link">Sunglasses</a>
+        <a href="catalog.html?category=Optical" class="mobile-nav-link">Optical Prescription</a>
+        <a href="contact.html" class="mobile-nav-link">Visit Us</a>
+      </nav>
+
+      <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.75rem;">
+        <button type="button" class="btn btn-primary" onclick="openInquiryModal()">
+          Book Private Fitting
+        </button>
+        <a href="https://wa.me/18005550199?text=Hello%20L'Optique%20Concierge" target="_blank" class="btn btn-whatsapp">
+          Enquire on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Lifestyle Section -->
+    <section class="hero-section" aria-label="Hero Showcase">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">Haute Lunetterie • Est. 1984</span>
+          <h1 class="hero-title serif-heading">
+            Vision Refined by <em>Heritage</em> & Artistry.
+          </h1>
+          <p class="hero-subtitle">
+            An exquisite catalogue celebrating the world's most revered eyewear houses. From hand-carved Italian acetate to cutting-edge aerodynamic optics, discover timeless frames sculpted for discerning faces.
+          </p>
+          <div class="hero-cta-group">
+            <a href="catalog.html" class="btn btn-primary btn-lg">Explore Catalogue</a>
+            <a href="brands.html" class="btn btn-outline btn-lg">Discover Our Brands</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-num">5</div>
+              <div class="stat-label">Distinguished Brands</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">100%</div>
+              <div class="stat-label">Artisanal Authenticity</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">Private</div>
+              <div class="stat-label">Boutique Consultations</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Showcase Grid -->
+    <section class="section-padding" aria-label="Featured Eyewear Houses">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">The Curated Houses</span>
+          <h2 class="section-title serif-heading">Icons of Global Optical Design</h2>
+          <p class="section-desc">
+            We partner exclusively with historic ateliers and innovative manufacturers whose dedication to silhouette, material, and optical clarity is peerless.
+          </p>
+        </div>
+
+        <div class="brands-grid" id="brandsShowcaseGrid">
+          <!-- Rendered dynamically by home.js via data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated Featured Collection -->
+    <section class="section-padding" style="background: var(--bg-dark-surface); border-top: 1px solid var(--bg-dark-border); border-bottom: 1px solid var(--bg-dark-border);" aria-label="Featured Collection">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Curator's Selection</span>
+          <h2 class="section-title serif-heading">Featured Catalogue Highlights</h2>
+          <p class="section-desc">
+            Hand-selected icons and newly arrived silhouettes, verified for structural excellence and distinctive facial presence.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="products-filter-nav" id="featuredFilterNav">
+          <button type="button" class="filter-pill-btn active" data-category="All">All Curations</button>
+          <button type="button" class="filter-pill-btn" data-category="Sunglasses">Sunglasses</button>
+          <button type="button" class="filter-pill-btn" data-category="Optical">Optical Prescription</button>
+        </div>
+
+        <div class="products-grid" id="featuredProductsGrid">
+          <!-- Rendered dynamically by home.js via data.js -->
+        </div>
+
+        <div style="text-align: center; margin-top: 3.5rem;">
+          <a href="catalog.html" class="btn btn-outline btn-lg">View Complete 16-Frame Catalogue →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Editorial Campaign Split Section -->
+    <section class="section-padding editorial-section" aria-label="Editorial Campaign">
+      <div class="container">
+        <div class="editorial-grid">
+          <div class="editorial-image-frame">
+            <img src="assets/images/editorial-campaign.jpg" alt="Editorial eyewear campaign in Mediterranean coastal sunlight" loading="lazy">
+            <div class="editorial-quote-box">
+              <p>“Eyewear is the most intimate garment one wears. It rests upon the architecture of the face, framing how you observe the universe.”</p>
+              <span>— L'Optique Master Optician Journal</span>
+            </div>
+          </div>
+
+          <div class="editorial-content-details">
+            <span class="eyebrow">Artisanal Mastery</span>
+            <h2 class="section-title serif-heading">The Alchemy of Italian Acetate</h2>
+            <p>
+              True luxury begins deep in the hills of northern Italy, where cotton cellulose is cured for months before being pressed into solid color sheets. Each frame is sliced using diamond-tipped cutters, hand-tumbled in aged beechwood tumbling barrels with natural pumice, and buffed by master artisans for over three days.
+            </p>
+            <p>
+              Every contour, hinge barrel, and bridge bevel is checked against precise millimeter tolerances to achieve featherweight balance and generational endurance.
+            </p>
+
+            <div class="editorial-features-list">
+              <div class="editorial-feature-item">
+                <div class="feature-bullet">I</div>
+                <div class="feature-text">
+                  <h4>Organic Cellulose</h4>
+                  <p>Hypoallergenic, breathable cotton acetate with deep optical depth.</p>
+                </div>
+              </div>
+              <div class="editorial-feature-item">
+                <div class="feature-bullet">II</div>
+                <div class="feature-text">
+                  <h4>Meflecto Stems</h4>
+                  <p>Patented Italian flex systems that mold to your unique skull contours.</p>
+                </div>
+              </div>
+              <div class="editorial-feature-item">
+                <div class="feature-bullet">III</div>
+                <div class="feature-text">
+                  <h4>Mineral Crystal</h4>
+                  <p>Scratch-proof silicates ground for distortion-free clarity.</p>
+                </div>
+              </div>
+              <div class="editorial-feature-item">
+                <div class="feature-bullet">IV</div>
+                <div class="feature-text">
+                  <h4>Bespoke Fitting</h4>
+                  <p>Hand-tuned temple rake and pantoscopic angle in our ateliers.</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="brand.html?brand=persol" class="btn btn-primary">Discover Persol Craftsmanship</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style & Silhouette Categories Grid -->
+    <section class="section-padding" aria-label="Eyewear Categories">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Silhouettes & Styles</span>
+          <h2 class="section-title serif-heading">Curated by Aesthetic Disposition</h2>
+          <p class="section-desc">
+            Explore frames defined by silhouette, lifestyle temperament, and structural profile.
+          </p>
+        </div>
+
+        <div class="categories-grid">
+          <!-- Sunglasses -->
+          <a href="catalog.html?category=Sunglasses" class="category-card">
+            <img src="assets/images/style-sunglasses.jpg" alt="Luxury Sunglasses" class="category-card-bg" loading="lazy">
+            <div class="category-card-overlay"></div>
+            <div class="category-card-content">
+              <span class="category-card-tag">Sun Protection</span>
+              <h3 class="category-card-name">Sunwear Icons</h3>
+              <div class="category-card-explore">Explore Collection →</div>
+            </div>
+          </a>
+
+          <!-- Optical -->
+          <a href="catalog.html?category=Optical" class="category-card">
+            <img src="assets/images/style-optical.jpg" alt="Prescription Optical Eyewear" class="category-card-bg" loading="lazy">
+            <div class="category-card-overlay"></div>
+            <div class="category-card-content">
+              <span class="category-card-tag">Prescription</span>
+              <h3 class="category-card-name">Architectural Optical</h3>
+              <div class="category-card-explore">Explore Collection →</div>
+            </div>
+          </a>
+
+          <!-- Statement -->
+          <a href="catalog.html?shape=Square" class="category-card">
+            <img src="assets/images/style-statement.jpg" alt="Bold Statement Frames" class="category-card-bg" loading="lazy">
+            <div class="category-card-overlay"></div>
+            <div class="category-card-content">
+              <span class="category-card-tag">Avant-Garde</span>
+              <h3 class="category-card-name">Sculptural Acetate</h3>
+              <div class="category-card-explore">Explore Collection →</div>
+            </div>
+          </a>
+
+          <!-- Minimalist -->
+          <a href="catalog.html?shape=Round" class="category-card">
+            <img src="assets/images/style-minimalist.jpg" alt="Minimalist Eyewear" class="category-card-bg" loading="lazy">
+            <div class="category-card-overlay"></div>
+            <div class="category-card-content">
+              <span class="category-card-tag">Pure Geometry</span>
+              <h3 class="category-card-name">Minimalist Wire</h3>
+              <div class="category-card-explore">Explore Collection →</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Store Boutique & Visit Section -->
+    <section class="section-padding boutique-section" aria-label="Flagship Boutiques">
+      <div class="container">
+        <div class="boutique-grid">
+          <div class="boutique-info-card">
+            <span class="eyebrow">The Atelier Experience</span>
+            <h2 class="section-title serif-heading">Visit Our Private Fitting Salons</h2>
+            <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;">
+              Step into an intimate sanctuary designed for the appreciation of optics. Our flagship showrooms provide one-on-one appointments with master opticians, high-precision wavefront biometric corneal scanning, and custom temple fitting.
+            </p>
+
+            <div class="boutique-details-list">
+              <div class="boutique-detail-item">
+                <h4>Flagship Atelier</h4>
+                <p>482 Madison Avenue<br>New York, NY 10022</p>
+              </div>
+              <div class="boutique-detail-item">
+                <h4>Private Hours</h4>
+                <p>Monday – Saturday<br>10:00 AM – 7:00 PM</p>
+              </div>
+              <div class="boutique-detail-item">
+                <h4>Concierge Service</h4>
+                <p>Dedicated WhatsApp Stylist<br>Complimentary Adjustments</p>
+              </div>
+              <div class="boutique-detail-item">
+                <h4>Optical Lab</h4>
+                <p>Zeiss & Essilor Precision<br>Same-Day Fitting Available</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <button type="button" class="btn btn-primary" onclick="openInquiryModal('Boutique Consultation', 'MADISON-FLAGSHIP')">
+                Schedule Fitting Appointment
+              </button>
+              <a href="contact.html" class="btn btn-outline">
+                All Boutique Locations
+              </a>
+            </div>
+          </div>
+
+          <div class="boutique-image-wrapper">
+            <img src="assets/images/boutique-store.jpg" alt="Interior of luxury L'Optique optical boutique with illuminated oak displays" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Luxury Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <div class="site-logo">
+            <span class="brand-name">L'OPTIQUE</span>
+            <span class="brand-tagline">Maison de Lunetterie</span>
+          </div>
+          <p>
+            An archival luxury optical destination showcasing heritage craftsmanship from Italy, California, and France. Dedicated to facial symmetry, lens mastery, and bespoke frame fittings.
+          </p>
+          <div style="display: flex; gap: 0.75rem;">
+            <a href="https://wa.me/18005550199?text=Hello%20L'Optique%20Concierge" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+              Direct Whatsapp Enquiry
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Curated Houses</h4>
+          <ul class="footer-links-list">
+            <li><a href="brand.html?brand=ray-ban">Ray-Ban</a></li>
+            <li><a href="brand.html?brand=persol">Persol</a></li>
+            <li><a href="brand.html?brand=oliver-peoples">Oliver Peoples</a></li>
+            <li><a href="brand.html?brand=oakley">Oakley</a></li>
+            <li><a href="brand.html?brand=vogue-eyewear">Vogue Eyewear</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Catalogue & Care</h4>
+          <ul class="footer-links-list">
+            <li><a href="catalog.html">Complete Catalogue</a></li>
+            <li><a href="catalog.html?category=Sunglasses">Sunglasses Collection</a></li>
+            <li><a href="catalog.html?category=Optical">Optical Prescription</a></li>
+            <li><a href="contact.html">Private Try-On Appointments</a></li>
+            <li><a href="contact.html#faq">Prescription Lens Guide</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">L'Optique Privé</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 0.75rem;">
+            Receive invitations to private salon showings, rare collector editions, and limited acetate trunk shows.
+          </p>
+          <form class="newsletter-form footer-newsletter-form">
+            <input type="email" placeholder="Your email address..." class="footer-input" required aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 L'OPTIQUE Maison de Lunetterie. All Rights Reserved. Curated Luxury Eyewear Catalogue.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="brands.html">Brand Index</a>
+          <a href="catalog.html">Catalogue Directory</a>
+          <a href="contact.html">Concierge Hotline</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Live Search Modal -->
+  <div class="modal-overlay" id="searchModal" role="dialog" aria-modal="true" aria-labelledby="searchModalTitle">
+    <div class="modal-window search-modal-window">
+      <div class="modal-header">
+        <h3 class="modal-title" id="searchModalTitle">Search Our Optical Vault</h3>
+        <span class="modal-close-btn" aria-label="Close search">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="search-input-wrapper">
+          <svg class="search-icon-pos" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="searchModalInput" class="search-modal-input" placeholder="Search by model, brand, shape (e.g. Aviator, Persol, Titanium)..." autocomplete="off">
+        </div>
+        <div id="searchResultsContainer">
+          <!-- Dynamic results -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Private Fitting / Inquiry Modal -->
+  <div class="modal-overlay" id="inquiryModal" role="dialog" aria-modal="true" aria-labelledby="inquiryModalTitle">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 class="modal-title" id="inquiryModalTitle">Schedule Private Fitting</h3>
+        <span class="modal-close-btn" aria-label="Close modal">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+          Reserve an exclusive one-on-one styling session with our master opticians. We will have your selected frames prepared upon arrival.
+        </p>
+        <form id="boutiqueInquiryForm">
+          <div class="form-group">
+            <label class="form-label" for="inquiryFrameField">Selected Frame / Inquiry Reference</label>
+            <input type="text" id="inquiryFrameField" class="form-input" readonly>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="inquiryName">Full Name</label>
+            <input type="text" id="inquiryName" class="form-input" placeholder="e.g. Eleanor Vance" required>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label" for="inquiryEmail">Email Address</label>
+              <input type="email" id="inquiryEmail" class="form-input" placeholder="name@domain.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inquiryPhone">Phone / WhatsApp</label>
+              <input type="tel" id="inquiryPhone" class="form-input" placeholder="+1 (555) 000-0000" required>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label" for="inquiryLocation">Preferred Boutique</label>
+              <select id="inquiryLocation" class="form-select">
+                <option value="Madison Avenue, New York">New York Flagship (Madison Ave)</option>
+                <option value="Via Montenapoleone, Milan">Milan Atelier (Via Montenapoleone)</option>
+                <option value="Rodeo Drive, Beverly Hills">Beverly Hills Studio (Rodeo Dr)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inquiryDate">Preferred Date</label>
+              <input type="date" id="inquiryDate" class="form-input" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="inquiryNotes">Optical Notes / Prescription Requirements (Optional)</label>
+            <textarea id="inquiryNotes" class="form-textarea" rows="2" placeholder="e.g. Progressive lens consultation, high myopia, custom acetate fitting..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            Confirm Private Fitting Reservation
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Master Data & Interactive Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

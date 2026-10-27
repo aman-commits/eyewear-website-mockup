@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore L'Optique's complete multi-brand eyewear catalogue. Filter by brand, shape, material, and category across Ray-Ban, Persol, Oliver Peoples, Oakley, and Vogue Eyewear.">
+  <title>Master Eyewear Catalogue | L'OPTIQUE Maison de Lunetterie</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar" aria-label="Announcement">
+    <div class="container">
+      <div>✦ Archival Multi-Brand Eyewear Catalogue & Private Fitting Inquiries</div>
+      <div>
+        Concierge WhatsApp: <a href="https://wa.me/18005550199?text=Hello%20L'Optique%20Concierge" target="_blank">+1 (800) 555-0199</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Site Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="site-logo" aria-label="L'Optique Home">
+        <div class="logo-monogram">O</div>
+        <div class="site-logo-text">
+          <span class="brand-name">L'OPTIQUE</span>
+          <span class="brand-tagline">Maison de Lunetterie</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="catalog.html" class="nav-link active">Catalogue</a>
+        <a href="brands.html" class="nav-link">Brands</a>
+        <a href="catalog.html?category=Sunglasses" class="nav-link">Sunglasses</a>
+        <a href="catalog.html?category=Optical" class="nav-link">Optical</a>
+        <a href="contact.html" class="nav-link">Visit Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="search-trigger-btn" data-action="open-search" aria-label="Search Catalogue">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span>Search (⌘K)</span>
+        </button>
+
+        <button type="button" class="btn btn-outline btn-sm" onclick="openInquiryModal()">
+          Book Try-On
+        </button>
+
+        <a href="https://wa.me/18005550199?text=Hello%20L'Optique%20Concierge,%20I%20would%20like%20to%20inquire%20about%20your%20curated%20eyewear%20catalogue." target="_blank" rel="noopener noreferrer" class="btn-concierge" aria-label="Enquire Now">
+          <span class="live-indicator"></span>
+          <span>Enquire Now</span>
+        </a>
+
+        <button type="button" class="mobile-menu-btn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-content">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <span class="site-logo">
+          <span class="brand-name" style="font-size: 1.3rem;">L'OPTIQUE</span>
+          <span class="brand-tagline">Maison de Lunetterie</span>
+        </span>
+        <span class="modal-close-btn">&times;</span>
+      </div>
+
+      <nav class="mobile-drawer-nav">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="catalog.html" class="mobile-nav-link active">Full Catalogue</a>
+        <a href="brands.html" class="mobile-nav-link">Brands</a>
+        <a href="catalog.html?category=Sunglasses" class="mobile-nav-link">Sunglasses</a>
+        <a href="catalog.html?category=Optical" class="mobile-nav-link">Optical Prescription</a>
+        <a href="contact.html" class="mobile-nav-link">Visit Us</a>
+      </nav>
+
+      <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.75rem;">
+        <button type="button" class="btn btn-primary" onclick="openInquiryModal()">
+          Book Private Fitting
+        </button>
+        <a href="https://wa.me/18005550199?text=Hello%20L'Optique%20Concierge" target="_blank" class="btn btn-whatsapp">
+          Enquire on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Catalogue Header -->
+    <section class="catalog-page-header">
+      <div class="container">
+        <span class="eyebrow">The Master Vault</span>
+        <h1 class="serif-heading" style="font-size: clamp(2rem, 3.5vw, 3rem); color: #fff; margin-bottom: 0.5rem;">
+          The Complete Eyewear Catalogue
+        </h1>
+        <p style="color: var(--text-muted); max-width: 650px;">
+          Explore curated frames across historic houses. Filter by silhouette, craftsmanship material, and brand heritage to find your definitive facial signature.
+        </p>
+      </div>
+    </section>
+
+    <!-- Master Catalogue Layout -->
+    <section class="container catalog-layout">
+      <!-- Filter Sidebar -->
+      <aside class="catalog-sidebar" id="catalogSidebar" aria-label="Filter Catalogue">
+        <div class="sidebar-header-mobile">
+          <span class="sidebar-title">Filters & Silhouettes</span>
+          <button type="button" class="btn-close-sidebar" id="closeSidebarBtn" aria-label="Close filters">&times;</button>
+        </div>
+        <form id="catalogFilterForm">
+          <!-- Real-Time Keyword Filter -->
+          <div class="filter-group">
+            <label class="filter-title" for="catalogSearchInput">
+              <span>Keyword Search</span>
+            </label>
+            <input type="text" id="catalogSearchInput" class="filter-search-input" placeholder="e.g. Aviator, Tortoise, Prizm...">
+          </div>
+
+          <!-- Category Radios -->
+          <div class="filter-group">
+            <div class="filter-title">Eyewear Category</div>
+            <div class="filter-options-list">
+              <label class="filter-checkbox-label">
+                <input type="radio" name="categoryFilter" value="All" checked>
+                <span>All Frames</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="radio" name="categoryFilter" value="Sunglasses">
+                <span>Sunglasses (UV Protection)</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="radio" name="categoryFilter" value="Optical">
+                <span>Optical (Prescription Ready)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Brand Multi-Select -->
+          <div class="filter-group">
+            <div class="filter-title">Optical Houses</div>
+            <div class="filter-options-list" id="filterBrandsList">
+              <!-- Rendered by catalog.js -->
+            </div>
+          </div>
+
+          <!-- Shape Multi-Select -->
+          <div class="filter-group">
+            <div class="filter-title">Frame Silhouette</div>
+            <div class="filter-options-list" id="filterShapesList">
+              <!-- Rendered by catalog.js -->
+            </div>
+          </div>
+
+          <!-- Material Multi-Select -->
+          <div class="filter-group">
+            <div class="filter-title">Craft Material</div>
+            <div class="filter-options-list" id="filterMaterialsList">
+              <!-- Rendered by catalog.js -->
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+            <button type="button" class="btn btn-outline btn-sm" style="width: 100%;" onclick="resetFilters()">
+              Clear All Selections
+            </button>
+            <div class="sidebar-mobile-apply">
+              <button type="button" class="btn btn-primary btn-sm" style="width: 100%;" id="applyMobileFiltersBtn">
+                Apply Filters & View Results
+              </button>
+            </div>
+          </div>
+        </form>
+      </aside>
+
+      <!-- Main Results Column -->
+      <div class="catalog-main-content">
+        <!-- Toolbar -->
+        <div class="catalog-toolbar">
+          <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+            <button type="button" class="mobile-filter-trigger-btn" id="mobileFilterToggleBtn" aria-label="Open Filter Controls">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="4" y1="21" x2="4" y2="14"></line>
+                <line x1="4" y1="10" x2="4" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="3"></line>
+                <line x1="20" y1="21" x2="20" y2="16"></line>
+                <line x1="20" y1="12" x2="20" y2="3"></line>
+                <line x1="1" y1="14" x2="7" y2="14"></line>
+                <line x1="9" y1="8" x2="15" y2="8"></line>
+                <line x1="17" y1="16" x2="23" y2="16"></line>
+              </svg>
+              <span>Filter & Refine</span>
+              <span class="filter-count-badge" id="mobileFilterCountBadge" style="display: none;">0</span>
+            </button>
+            <div class="catalog-result-count" id="catalogResultCount">
+              Showing frames...
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <label for="catalogSortSelect" style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Sort By:</label>
+            <select id="catalogSortSelect" class="catalog-sort-select">
+              <option value="featured">Featured Curations</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="name-asc">Alphabetical (A - Z)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Active Filter Chips -->
+        <div class="catalog-active-chips" id="activeFilterChips">
+          <!-- Rendered dynamically -->
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="catalogGrid">
+          <!-- Rendered dynamically by catalog.js via data.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Luxury Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <div class="site-logo">
+            <span class="brand-name">L'OPTIQUE</span>
+            <span class="brand-tagline">Maison de Lunetterie</span>
+          </div>
+          <p>
+            An archival luxury optical destination showcasing heritage craftsmanship from Italy, California, and France. Dedicated to facial symmetry, lens mastery, and bespoke frame fittings.
+          </p>
+          <div style="display: flex; gap: 0.75rem;">
+            <a href="https://wa.me/18005550199?text=Hello%20L'Optique%20Concierge" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+              Direct Whatsapp Enquiry
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Curated Houses</h4>
+          <ul class="footer-links-list">
+            <li><a href="brand.html?brand=ray-ban">Ray-Ban</a></li>
+            <li><a href="brand.html?brand=persol">Persol</a></li>
+            <li><a href="brand.html?brand=oliver-peoples">Oliver Peoples</a></li>
+            <li><a href="brand.html?brand=oakley">Oakley</a></li>
+            <li><a href="brand.html?brand=vogue-eyewear">Vogue Eyewear</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Catalogue & Care</h4>
+          <ul class="footer-links-list">
+            <li><a href="catalog.html">Complete Catalogue</a></li>
+            <li><a href="catalog.html?category=Sunglasses">Sunglasses Collection</a></li>
+            <li><a href="catalog.html?category=Optical">Optical Prescription</a></li>
+            <li><a href="contact.html">Private Try-On Appointments</a></li>
+            <li><a href="contact.html#faq">Prescription Lens Guide</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">L'Optique Privé</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 0.75rem;">
+            Receive invitations to private salon showings, rare collector editions, and limited acetate trunk shows.
+          </p>
+          <form class="newsletter-form footer-newsletter-form">
+            <input type="email" placeholder="Your email address..." class="footer-input" required aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 L'OPTIQUE Maison de Lunetterie. All Rights Reserved. Curated Luxury Eyewear Catalogue.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="brands.html">Brand Index</a>
+          <a href="catalog.html">Catalogue Directory</a>
+          <a href="contact.html">Concierge Hotline</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Modals -->
+  <div class="modal-overlay" id="searchModal" role="dialog" aria-modal="true">
+    <div class="modal-window search-modal-window">
+      <div class="modal-header">
+        <h3 class="modal-title">Search Our Optical Vault</h3>
+        <span class="modal-close-btn">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="search-input-wrapper">
+          <svg class="search-icon-pos" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="searchModalInput" class="search-modal-input" placeholder="Search by model, brand, shape..." autocomplete="off">
+        </div>
+        <div id="searchResultsContainer"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="inquiryModal" role="dialog" aria-modal="true">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 class="modal-title">Schedule Private Fitting</h3>
+        <span class="modal-close-btn">&times;</span>
+      </div>
+      <div class="modal-body">
+        <form id="boutiqueInquiryForm">
+          <div class="form-group">
+            <label class="form-label" for="inquiryFrameField">Selected Frame / Inquiry Reference</label>
+            <input type="text" id="inquiryFrameField" class="form-input" readonly>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="inquiryName">Full Name</label>
+            <input type="text" id="inquiryName" class="form-input" placeholder="e.g. Eleanor Vance" required>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label" for="inquiryEmail">Email Address</label>
+              <input type="email" id="inquiryEmail" class="form-input" placeholder="name@domain.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inquiryPhone">Phone / WhatsApp</label>
+              <input type="tel" id="inquiryPhone" class="form-input" placeholder="+1 (555) 000-0000" required>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label" for="inquiryLocation">Preferred Boutique</label>
+              <select id="inquiryLocation" class="form-select">
+                <option value="Madison Avenue, New York">New York Flagship (Madison Ave)</option>
+                <option value="Via Montenapoleone, Milan">Milan Atelier (Via Montenapoleone)</option>
+                <option value="Rodeo Drive, Beverly Hills">Beverly Hills Studio (Rodeo Dr)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inquiryDate">Preferred Date</label>
+              <input type="date" id="inquiryDate" class="form-input" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="inquiryNotes">Optical Notes (Optional)</label>
+            <textarea id="inquiryNotes" class="form-textarea" rows="2" placeholder="e.g. High index lenses, frame consultation..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            Confirm Reservation
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/catalog.js"></script>
+</body>
+</html>
